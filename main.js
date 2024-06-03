@@ -1,5 +1,5 @@
-let num1;
-let num2;
+let num1 = 10;
+let num2 = 2;
 
 function addNums(num1, num2) {
   return num1 + num2;
@@ -22,6 +22,6 @@ let btns = document.querySelectorAll("button");
 
 btns.forEach((btn) => {
   btn.addEventListener("click", () => {
-    screenView.textContent = addNums(num1, num2);
+    screenView.textContent = num1 + num2;
   });
 });
