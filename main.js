@@ -1,20 +1,25 @@
 let num1;
 let num2;
+let operator;
+let result;
 
-function addNums(num1, num2) {
-  return num1 + num2;
+function calculator(num1, num2, operator) {
+  if (operator === "+") {
+    return num1 + num2;
+  }
+  if (operator === "-") {
+    return num1 - num2;
+  }
+  if (operator === "*") {
+    return num1 * num2;
+  }
+  if (operator === "/") {
+    return num1 / num2;
+  }
 }
 
-function subtractNums(num1, num2) {
-  return num1 - num2;
-}
-
-function multNums(num1, num2) {
-  return num1 * num2;
-}
-
-function divideNums(num1, num2) {
-  return num1 / num2;
+function operate(num1, num2, operator) {
+  return calculator(num1, num2, operator);
 }
 
 let screenView = document.querySelector(".screen-view");
@@ -25,11 +30,12 @@ btns.forEach((bt) => {
     screenView.textContent = e.target.innerHTML;
     console.log(screenView.textContent);
     if (screenView.innerHTML >= 0 && screenView.innerHTML < 10) {
-      num1 = screenView.innerHTML;
-      if (screenView.innerHTML >= 0 && screenView.innerHTML < 10) {
-        num2 = screenView.innerHTML;
+      num1 = parseInt(screenView.innerHTML);
+      num2 = parseInt(screenView.innerHTML);
+      while (num1 != num2) {
+        result = num1.innerHTML + num2.innerHTML;
+        console.log(result);
       }
-      console.log(num1 + num2);
     }
   });
 });
