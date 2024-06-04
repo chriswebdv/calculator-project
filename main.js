@@ -22,7 +22,10 @@ let btns = document.querySelectorAll("button");
 
 btns.forEach((bt) => {
   bt.addEventListener("click", (e) => {
-    screenView = screenView.textContent = e.target.innerHTML;
-    console.log(screenView);
+    screenView.textContent = e.target.innerHTML;
+    console.log(screenView.textContent);
+    if (screenView.innerHTML === "+" && screenView.innerHTML === "=") {
+      console.log((screenView.innerHTML = screenView.innerHTML));
+    }
   });
 });
