@@ -24,8 +24,12 @@ btns.forEach((bt) => {
   bt.addEventListener("click", (e) => {
     screenView.textContent = e.target.innerHTML;
     console.log(screenView.textContent);
-    if (screenView.innerHTML === "+" && screenView.innerHTML === "=") {
-      console.log((screenView.innerHTML = screenView.innerHTML));
+    if (screenView.innerHTML >= 0 && screenView.innerHTML < 10) {
+      num1 = screenView.innerHTML;
+      if (screenView.innerHTML >= 0 && screenView.innerHTML < 10) {
+        num2 = screenView.innerHTML;
+      }
+      console.log(num1 + num2);
     }
   });
 });
